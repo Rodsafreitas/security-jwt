@@ -9,7 +9,6 @@ import javax.annotation.security.RolesAllowed;
 import java.util.List;
 
 @RestController
-
 public class ProductController {
 
     @Autowired
