@@ -9,7 +9,7 @@ import javax.annotation.security.RolesAllowed;
 import java.util.List;
 
 @RestController
-@RolesAllowed("ADMIN")
+
 public class ProductController {
 
     @Autowired
@@ -26,6 +26,7 @@ public class ProductController {
     }
 
     @DeleteMapping("/product/{id}")
+    @RolesAllowed("ADMIN")
     public void delete(@PathVariable Long id){
       this.productRepository.deleteById(id);
     }
